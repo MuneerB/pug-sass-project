@@ -1,0 +1,14 @@
+{
+  "name": "pug-sass-project",
+  "version": "1.0.0",
+  "description": "Example of using Pug and Sass with separate folders",
+  "scripts": {
+    "build:pug": "pug views/index.pug --out dist",
+    "build:sass": "sass sass/styles.scss dist/styles.css --style=expanded",
+    "build": "npm run build:pug && npm run build:sass"
+  },
+  "devDependencies": {
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.62.1"
+  }
+}
