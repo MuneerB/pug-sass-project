@@ -1,14 +1,30 @@
 {
-  "name": "pug-sass-project",
+  "name": "webpack-sass-pug-project",
   "version": "1.0.0",
-  "description": "Example of using Pug and Sass with separate folders",
+  "description": "A Webpack project with Sass, Pug, and JavaScript",
+  "main": "index.js",
   "scripts": {
-    "build:pug": "pug views/index.pug --out dist",
-    "build:sass": "sass sass/styles.scss dist/styles.css --style=expanded",
-    "build": "npm run build:pug && npm run build:sass"
+    "start": "webpack serve",
+    "build": "webpack"
   },
+  "author": "Your Name",
+  "license": "MIT",
   "devDependencies": {
-    "pug-cli": "^1.0.0-alpha6",
-    "sass": "^1.62.1"
+    "@babel/core": "^7.26.7",
+    "@babel/preset-env": "^7.26.7",
+    "babel-loader": "^9.2.1",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.11.0",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "pug": "^2.0.4",
+    "pug-html-loader": "^1.1.7",
+    "pug-loader": "^2.4.0",
+    "sass": "^1.83.4",
+    "sass-loader": "^13.3.3",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.2.0"
   }
 }
