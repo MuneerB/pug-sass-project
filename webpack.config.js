@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  mode: 'development', // Ensures Webpack runs in development mode
+  mode: 'development',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -16,18 +16,18 @@ module.exports = {
         test: /\.pug$/,
         use: [
           {
-            loader: 'pug-loader', // Ensure 'pug-loader' is installed
+            loader: 'pug-loader',
             options: { pretty: true },
           },
         ],
       },
       {
         test: /\.scss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader',
-        ],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(png|jpg|jpeg|svg|gif)$/i,
+        type: 'asset/resource',  // Enables handling images
       },
       {
         test: /\.js$/,
