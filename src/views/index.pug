@@ -1,0 +1,34 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Verdura Resort, Sicily with Pug and Sass
+    link(rel="stylesheet" href="styles.css")
+
+  body
+    include components/header.pug
+
+    section.hero-section
+      .hero-content
+        p.hero-subtitle Verdura Resort, Sicily
+        h1.hero-heading A unique opportunity to call this extraordinary place home.
+
+      .card-grid
+        .card
+          .card-img-placeholder
+          h2.card-title Explore Villas
+          p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+          button.card-button Discover
+
+        .card
+          .card-img-placeholder
+          h2.card-title Explore Verdura Resort
+          p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+          button.card-button Discover
+
+        .card
+          .card-img-placeholder
+          h2.card-title Explore Sicily
+          p.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+          button.card-button Discover
