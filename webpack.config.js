@@ -17,9 +17,9 @@ module.exports = {
         use: [
           {
             loader: 'pug-loader',
-            options: { pretty: true },
-          },
-        ],
+            options: {} // This ensures options is an object
+          }
+        ]
       },
       {
         test: /\.scss$/,
@@ -27,7 +27,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|jpeg|svg|gif)$/i,
-        type: 'asset/resource',  // Enables handling images
+        type: 'asset/resource',
       },
       {
         test: /\.js$/,
@@ -49,7 +49,7 @@ module.exports = {
   devServer: {
     static: path.join(__dirname, 'dist'),
     compress: true,
-    port: 9000,
+    port: 9001,
     open: true,
   },
   resolve: {
