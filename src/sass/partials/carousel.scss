@@ -1,0 +1,99 @@
+.carousel {
+  padding: 3rem 0;
+  text-align: center;
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+
+  .carousel-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+  }
+
+  .carousel-item {
+    position: relative;
+    flex: 1;
+    max-width: 48%;
+    scroll-snap-align: start;
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .carousel-text {
+      text-align: left;
+      padding: 1rem;
+      
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 1rem;
+      }
+      
+      .carousel-button {
+        background: #000;
+        color: #fff;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background 0.3s;
+
+        &:hover {
+          background: #444;
+        }
+      }
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .carousel {
+    flex-direction: column;
+  }
+
+  .carousel-container {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+
+  .carousel-item {
+    min-width: 100%;
+    flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .carousel-item {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .carousel-text {
+    padding: 0.5rem;
+  }
+
+  .carousel-button {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+}
