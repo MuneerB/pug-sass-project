@@ -1,3 +1,7 @@
+/******/ (() => { // webpackBootstrap
+/*!*********************************!*\
+  !*** ./src/scripts/carousel.js ***!
+  \*********************************/
 // Updated Carousel Script with Correct Slide Visibility and Navigation Button Styling
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -111,3 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+/******/ })()
+;
+//# sourceMappingURL=carousel.js.map

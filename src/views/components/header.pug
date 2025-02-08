@@ -2,12 +2,25 @@ header.header
   nav.navbar
     a.logo(href="#")
       img(src="assets/images/logo.png" alt="Logo")
-    ul.nav-links
+    
+    // Desktop Navigation (always visible)
+    ul.nav-links.desktop
       li: a(href="#") Home
       li: a(href="#") About
       li: a(href="#") Services
       li: a(href="#") Contact
-    button.nav-toggle(aria-label="Toggle Navigation")
+
+    // Mobile Navigation Toggle (Only in Mobile)
+    button.nav-toggle(aria-label="Toggle Navigation" aria-expanded="false")
       span
       span
       span
+
+  // Mobile Navigation Overlay
+  .mobile-nav-overlay
+    ul.nav-links.mobile(aria-hidden="true")
+      li: a(href="#") Home
+      li: a(href="#") About
+      li: a(href="#") Services
+      li: a(href="#") Contact
+    button.close-nav ✕
